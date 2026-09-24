@@ -1,5 +1,7 @@
 # Jev Studio
 
+<img width="1646" height="985" alt="image" src="https://github.com/user-attachments/assets/17b3541e-8681-4900-b31d-971fff85b511" />
+
 A visual interface for building, running, and inspecting [Jev](https://ai-sdk.dev) evaluations — structured decisions, classification, and scoring on top of the Vercel AI SDK's `experimental_evaluate`.
 
 Build evaluation questions (boolean, choice, score) through a UI, run them against a model, and inspect the structured results — no hand-written prompt/schema wiring required.
