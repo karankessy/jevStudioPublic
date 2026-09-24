@@ -8,6 +8,8 @@ Build evaluation questions (boolean, choice, score) through a UI, run them again
 
 ## Features
 
+<img width="1234" height="730" alt="image" src="https://github.com/user-attachments/assets/0ce9ed9c-b40a-4ea9-811e-cc5f6fdf888d" />
+
 - **Visual question builder** — compose boolean, multiple-choice, and score-based evaluation criteria without writing raw Jev schemas.
 - **Live evaluation runner** — send state + questions to the API route and view structured answers (with probabilities/confidence where applicable).
 - **JSON playground** — edit and run raw evaluation payloads directly.
