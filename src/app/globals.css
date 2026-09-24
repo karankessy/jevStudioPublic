@@ -1,26 +1,80 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --surface: #fafafa;
+  --surface-raised: #ffffff;
+  --border: #e4e4e7;
+  --foreground: #18181b;
+  --muted: #71717a;
+  --muted-foreground: #52525b;
+  --accent: #2563eb;
+  --accent-foreground: #ffffff;
+  --positive: #16a34a;
+  --warning: #d97706;
+  --danger: #dc2626;
+  --radius: 6px;
+}
+
+.dark {
+  --background: #0a0a0b;
+  --surface: #111113;
+  --surface-raised: #17171a;
+  --border: #27272a;
+  --foreground: #f4f4f5;
+  --muted: #a1a1aa;
+  --muted-foreground: #d4d4d8;
+  --accent: #3b82f6;
+  --accent-foreground: #0a0a0b;
+  --positive: #22c55e;
+  --warning: #f59e0b;
+  --danger: #ef4444;
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --color-border: var(--border);
   --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-positive: var(--positive);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+  --radius-sm: 4px;
+  --radius-md: var(--radius);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  border-color: var(--border);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+::selection {
+  background: color-mix(in srgb, var(--accent) 30%, transparent);
+}
+
+.scrollbar-thin {
+  scrollbar-width: thin;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(2px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.15s ease-out;
 }
